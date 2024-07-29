@@ -28,7 +28,8 @@ export default {
         </div>
     </header>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
+@use "../styles/partials/variables";
     header {
         height: 100px;
         img {
@@ -36,7 +37,7 @@ export default {
         }
         ul {
             .active {
-                border-bottom: 5px solid blue;
+                border-bottom: 5px solid variables.$primary_color;
                 padding-bottom: 42px;
             }
         }

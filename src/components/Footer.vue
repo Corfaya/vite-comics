@@ -152,7 +152,7 @@ export default {
                 
             </div>
         </div>
-        <div class="bg-secondary position-relative z-3">
+        <div class="position-relative z-3 bg-color">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -173,7 +173,8 @@ export default {
         </div>
     </footer>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
+@use "../styles/partials/variables";
 footer {
     .bg-image {
         background-image: url("../assets/footer-bg.jpg");
@@ -185,6 +186,10 @@ footer {
         img {
             top: -30px;
         }
+    }
+
+    .bg-color {
+        background-color: variables.$footer_bg;
     }
 }
 </style>

@@ -5,7 +5,7 @@ export default {
 </script>
 <template>
     <main class="position-relative z-3">
-        <div class="bg-dark py-5 ">
+        <div class="py-5 bg-color">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -16,6 +16,11 @@ export default {
         </div>
     </main>
 </template>
-<style lang="scss">
-    
+<style lang="scss" scoped>
+    @use "../styles/partials/variables";
+    main {
+        .bg-color {
+            background-color: variables.$main_bg;
+        }
+    }
 </style>
