@@ -4,7 +4,7 @@ export default {
 }
 </script>
 <template>
-    <main class="bg-dark py-5">
+    <main class="bg-dark py-5 position-relative z-3">
         <div class="container">
             <div class="row">
                 <div class="col-12">
