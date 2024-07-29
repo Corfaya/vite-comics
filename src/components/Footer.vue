@@ -1,6 +1,117 @@
 <script>
 export default {
-
+    data() {
+        return {
+            dcComicsList: [
+                {
+                    label: "Characters",
+                    path: "#"
+                },
+                {
+                    label: "Comics",
+                    path: "#"
+                },
+                {
+                    label: "Movies",
+                    path: "#"
+                },
+                {
+                    label: "TV",
+                    path: "#"
+                },
+                {
+                    label: "Games",
+                    path: "#"
+                },
+                {
+                    label: "Videos",
+                    path: "#"
+                },
+                {
+                    label: "News",
+                    path: "#"
+                }
+            ],
+            shopList: [
+                {
+                    label: "Shop DC",
+                    path: "#"
+                },
+                {
+                    label: "Shop DC Collectibles",
+                    path: "#"
+                }
+            ],
+            dcList: [
+                {
+                    label: "Terms Of Use",
+                    path: "#"
+                },
+                {
+                    label: "Privacy policy (New)",
+                    path: "#"
+                },
+                {
+                    label: "Ad Choises",
+                    path: "#"
+                },
+                {
+                    label: "Advertising",
+                    path: "#"
+                },
+                {
+                    label: "Jobs",
+                    path: "#"
+                },
+                {
+                    label: "Subscription",
+                    path: "#"
+                },
+                {
+                    label: "Talent Workshops",
+                    path: "#"
+                },
+                {
+                    label: "CPSC Certificates",
+                    path: "#"
+                },
+                {
+                    label: "Ratings",
+                    path: "#"
+                },
+                {
+                    label: "Shop Help",
+                    path: "#"
+                },
+                {
+                    label: "Contact Us",
+                    path: "#"
+                }
+            ],
+            sitesList: [
+                {
+                    label: "DC",
+                    path: "#"
+                },
+                {
+                    label: "MAD Magazione",
+                    path: "#"
+                },
+                {
+                    label: "DC Kids",
+                    path: "#"
+                },
+                {
+                    label: "DC Universe",
+                    path: "#"
+                },
+                {
+                    label: "DC Power Visa",
+                    path: "#"
+                }
+            ]
+        }
+    }
 }
 </script>
 <template>
@@ -13,46 +124,23 @@ export default {
                             <div class="me-5">
                                 <h4 class="py-3 text-white fw-bolder text-uppercase">DC Comics</h4>
                                 <ul class="list-unstyled">
-                                    <li><a class="text-decoration-none text-secondary" href="#">Characters</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Comics</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Movies</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">TV</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Games</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Videos</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">News</a></li>
+                                    <li v-for="link, index in dcComicsList" :key="index"><a class="text-decoration-none text-secondary" :href="link.path">{{link.label}}</a></li>
                                 </ul>
                                 <h4 class="py-3 text-white fw-bolder text-uppercase">Shop</h4>
                                 <ul class="list-unstyled">
-                                    <li><a class="text-decoration-none text-secondary" href="#">Shop DC</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Shop DC Collectibles</a>
-                                    </li>
+                                    <li v-for="link, index in shopList" :key="index"><a class="text-decoration-none text-secondary" :href="link.path">{{link.label}}</a></li>
                                 </ul>
                             </div>
                             <div class="me-5">
                                 <h4 class="py-3 text-white fw-bolder text-uppercase">DC</h4>
                                 <ul class="list-unstyled">
-                                    <li><a class="text-decoration-none text-secondary" href="#">Terms Of Use</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Privacy policy (New)</a>
-                                    </li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Ad Choises</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Advertising</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Jobs</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Subscription</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Talent Workshops</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">CPSC Certificates</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Ratings</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Ahop Help</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">Contact Us</a></li>
+                                    <li v-for="link, index in dcList" :key="index"><a class="text-decoration-none text-secondary" :href="link.path">{{link.label}}</a></li>
                                 </ul>
                             </div>
                             <div class="me-5">
                                 <h4 class="py-3 text-white fw-bolder text-uppercase">Sites</h4>
                                 <ul class="list-unstyled">
-                                    <li><a class="text-decoration-none text-secondary" href="#">DC</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">MAD Magazione</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">DC Kids</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">DC Universe</a></li>
-                                    <li><a class="text-decoration-none text-secondary" href="#">DC Power Visa</a></li>
+                                    <li v-for="link, index in sitesList" :key="index"><a class="text-decoration-none text-secondary" :href="link.path">{{link.label}}</a></li>
                                 </ul>
                             </div>
                         </div>
