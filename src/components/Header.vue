@@ -8,9 +8,9 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center">
                         <img class="img-fluid" src="../assets/dc-logo.png" alt="DC Comics">
-                        <ul class="list-unstyled d-flex align-items-center">
+                        <ul class="list-unstyled d-flex">
                             <li class="px-2 fw-bolder"><a class="text-decoration-none text-dark text-uppercase" href="#">Characters</a></li>
                             <li class="px-2 fw-bolder"><a class="active text-decoration-none text-dark text-uppercase" href="#">Comics</a></li>
                             <li class="px-2 fw-bolder"><a class="text-decoration-none text-dark text-uppercase" href="#">Movies</a></li>
@@ -30,10 +30,14 @@ export default {
 </template>
 <style lang="scss">
     header {
+        height: 100px;
+        img {
+            width: 70px;
+        }
         ul {
             .active {
-                border-bottom: 3px solid blue;
-                padding-bottom: 30px;
+                border-bottom: 5px solid blue;
+                padding-bottom: 42px;
             }
         }
     }
