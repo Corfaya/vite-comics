@@ -1,6 +1,61 @@
 <script>
 export default {
-    
+    data() {
+        return {
+            menuItems: [
+                {
+                    isClicked: false,
+                    label: "Characters",
+                    url: "#"
+                },
+                {
+                    isClicked: true,
+                    label: "Comics",
+                    url: "#"
+                },
+                {
+                    isClicked: false,
+                    label: "Movies",
+                    url: "#"
+                },
+                {
+                    isClicked: false,
+                    label: "Tv",
+                    url: "#"
+                },
+                {
+                    isClicked: false,
+                    label: "Games",
+                    url: "#"
+                },
+                {
+                    isClicked: false,
+                    label: "Collectibles",
+                    url: "#"
+                },
+                {
+                    isClicked: false,
+                    label: "Videos",
+                    url: "#"
+                },
+                {
+                    isClicked: false,
+                    label: "Fans",
+                    url: "#"
+                },
+                {
+                    isClicked: false,
+                    label: "News",
+                    url: "#"
+                },
+                {
+                    isClicked: false,
+                    label: "Shop",
+                    url: "#"
+                },
+            ]
+        }
+    }
 }
 </script>
 <template>
@@ -11,16 +66,7 @@ export default {
                     <div class="d-flex justify-content-between align-items-center">
                         <img class="img-fluid" src="../assets/dc-logo.png" alt="DC Comics">
                         <ul class="list-unstyled d-flex">
-                            <li class="px-2 fw-bolder"><a class="text-decoration-none text-dark text-uppercase" href="#">Characters</a></li>
-                            <li class="px-2 fw-bolder"><a class="active text-decoration-none text-dark text-uppercase" href="#">Comics</a></li>
-                            <li class="px-2 fw-bolder"><a class="text-decoration-none text-dark text-uppercase" href="#">Movies</a></li>
-                            <li class="px-2 fw-bolder"><a class="text-decoration-none text-dark text-uppercase" href="#">TV</a></li>
-                            <li class="px-2 fw-bolder"><a class="text-decoration-none text-dark text-uppercase" href="#">Games</a></li>
-                            <li class="px-2 fw-bolder"><a class="text-decoration-none text-dark text-uppercase" href="#">Collectibles</a></li>
-                            <li class="px-2 fw-bolder"><a class="text-decoration-none text-dark text-uppercase" href="#">Videos</a></li>
-                            <li class="px-2 fw-bolder"><a class="text-decoration-none text-dark text-uppercase" href="#">Fans</a></li>
-                            <li class="px-2 fw-bolder"><a class="text-decoration-none text-dark text-uppercase" href="#">News</a></li>
-                            <li class="px-2 fw-bolder"><a class="text-decoration-none text-dark text-uppercase" href="#">Shop</a></li>
+                            <li v-for="item, i in menuItems" :key="i" class="px-2 fw-bolder"><a class="text-decoration-none text-dark text-uppercase" :class="item.isClicked ? 'active' : ''"  :href="item.url"> {{ item.label }} </a></li>
                         </ul>
                     </div>
                 </div>
