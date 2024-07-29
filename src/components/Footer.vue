@@ -147,23 +147,23 @@ export default {
                             <div class="me-5">
                                 <h4 class="py-3 text-white fw-bolder text-uppercase">DC Comics</h4>
                                 <ul class="list-unstyled">
-                                    <li v-for="link, index in dcComicsList" :key="index"><a class="text-decoration-none text-secondary" :href="link.path">{{link.label}}</a></li>
+                                    <li v-for="link, index in dcComicsList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
                                 </ul>
                                 <h4 class="py-3 text-white fw-bolder text-uppercase">Shop</h4>
                                 <ul class="list-unstyled">
-                                    <li v-for="link, index in shopList" :key="index"><a class="text-decoration-none text-secondary" :href="link.path">{{link.label}}</a></li>
+                                    <li v-for="link, index in shopList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
                                 </ul>
                             </div>
                             <div class="me-5">
                                 <h4 class="py-3 text-white fw-bolder text-uppercase">DC</h4>
                                 <ul class="list-unstyled">
-                                    <li v-for="link, index in dcList" :key="index"><a class="text-decoration-none text-secondary" :href="link.path">{{link.label}}</a></li>
+                                    <li v-for="link, index in dcList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
                                 </ul>
                             </div>
                             <div class="me-5">
                                 <h4 class="py-3 text-white fw-bolder text-uppercase">Sites</h4>
                                 <ul class="list-unstyled">
-                                    <li v-for="link, index in sitesList" :key="index"><a class="text-decoration-none text-secondary" :href="link.path">{{link.label}}</a></li>
+                                    <li v-for="link, index in sitesList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -200,7 +200,17 @@ footer {
         background-size: cover;
         z-index: 2;
     }
-
+    .col-4 {
+        ul {
+            a {
+                color: grey;
+                transition: color 0.3 ease;
+                &:hover {
+                    color: rgb(165, 165, 165)
+                }
+            }
+        }
+    }
     .col-6 {
         img {
             top: -30px;
@@ -211,6 +221,12 @@ footer {
         background-color: variables.$footer_bg;
         button {
             border: 1px solid variables.$primary_color;
+            transition: all 0.3 ease;
+            &:hover {
+                background-color: #ffffffa1;
+                color: #fff;
+                border: 1px solid #ffffffa1
+            }
         }
     }
 
