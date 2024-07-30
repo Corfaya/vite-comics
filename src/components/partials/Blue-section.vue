@@ -37,7 +37,7 @@ export default {
     <div class="py-5">
         <div class="d-flex align-items-center justify-content-around">
             <div v-for="item, index in shopItems" :key="`shop-${index}`" class="d-flex align-items-center">
-                <a class="w_square me-3" :href="item.href">
+                <a class="w_square me-3 d-flex align-items-center" :href="item.href">
                     <img :src="item.src" :alt="item.text">
                 </a>
                 <p class="m-0 text-uppercase text-white">{{ item.text }}</p>
