@@ -4,7 +4,7 @@ export default {
 }
 </script>
 <template>
-    <div class="bg-hero"></div>
+    <div class="bg-hero position-relative"></div>
 </template>
 <style lang="scss">
     .bg-hero {

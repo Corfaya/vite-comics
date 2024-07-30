@@ -9,7 +9,7 @@ export default {
     <div class="col-2 mx-auto">
         <div class="cover-box">
             <img :src="cover.thumb" :alt="cover.series" class="img-fluid">
-            <p class="text-uppercase">{{ cover.series }}</p>
+            <p class="text-uppercase mt-3">{{ cover.series }}</p>
         </div>
     </div>
 </template>

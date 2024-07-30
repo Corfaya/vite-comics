@@ -20,6 +20,7 @@ export default {
     <main>
         <Hero />
         <div class="bg-color pt-5">
+            <button class="btn main-btn text-uppercase fw-bolder text-white rounded-0 position-absolute">Current Series</button>
             <div class="container">
                 <div class="row">
                     <ComicsSection v-for="thumb, index in comics" :key="`t-${index}`" :cover="thumb"/>
@@ -46,17 +47,28 @@ export default {
 <style lang="scss" scoped>
     @use "../styles/partials/variables";
     main {
+        button {
+            background-color: variables.$primary_color;
+            transition: all 0.3 ease;
+                    &:hover {
+                        background-color: darken(variables.$primary_color, 10%);
+                    }
+        }
         .bg-color {
             background-color: variables.$main_bg;
+            .main-btn {
+                padding: 10px 20px;
+                font-size: 24px;
+                top: 60%;
+                left: 10%;
+            }
             .col-12 {
                 button {
-                    background-color: variables.$primary_color;
                     border: 1px solid variables.$primary_color;
                     padding: 10px 60px;
                     transition: all 0.3 ease;
                     &:hover {
                         background-color: #ffffffa1;
-                        color: #fff;
                         border: 1px solid #ffffffa1
                     }
                 }
