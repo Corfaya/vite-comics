@@ -3,7 +3,7 @@ import { menuHeader } from '../data/menuLists'
 export default {
     data() {
         return {
-            menuHeader,
+            menuHeader
         }
     }
 }

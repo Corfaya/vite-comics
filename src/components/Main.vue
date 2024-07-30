@@ -20,7 +20,6 @@ export default {
     <main>
         <Hero />
         <div class="bg-color pt-5">
-            <button class="btn main-btn text-uppercase fw-bolder text-white rounded-0 position-absolute">Current Series</button>
             <div class="container">
                 <div class="row">
                     <ComicsSection v-for="thumb, index in comics" :key="`t-${index}`" :cover="thumb"/>
@@ -54,14 +53,13 @@ export default {
                         background-color: darken(variables.$primary_color, 10%);
                     }
         }
+        .main-btn {
+            padding: 10px 20px;
+            font-size: 24px;
+            left: 10%;
+        }
         .bg-color {
             background-color: variables.$main_bg;
-            .main-btn {
-                padding: 10px 20px;
-                font-size: 24px;
-                top: 60%;
-                left: 10%;
-            }
             .col-12 {
                 button {
                     border: 1px solid variables.$primary_color;

@@ -9,8 +9,8 @@ export default {
     <div class="col-2 mx-auto">
         <div class="cover-box">
             <img :src="cover.thumb" :alt="cover.series" class="img-fluid">
-            <p class="text-uppercase mt-3">{{ cover.series }}</p>
         </div>
+        <p class="text-uppercase text-white mt-3">{{ cover.series }}</p>
     </div>
 </template>
 <style lang="scss" scoped>
@@ -30,9 +30,6 @@ div.cover-box {
             opacity: 0.5;
             transform: scale(1.2)
         }
-    }
-    p {
-        color: white;
     }
 }
 </style>
