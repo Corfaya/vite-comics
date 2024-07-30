@@ -5,7 +5,7 @@ const menuHeader = [
         url: "#"
     },
     {
-        isClicked: true,
+        isClicked: false,
         label: "Comics",
         url: "#"
     },
