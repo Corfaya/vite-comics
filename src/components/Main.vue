@@ -1,14 +1,17 @@
 <script>
-import BlueSection from './partials/Blue-section.vue';
+import BlueSection from './partials/Blue-section.vue'
+import Hero from './partials/Hero.vue';
 
 export default {
     components: {
+        Hero,
         BlueSection
     }
 }
 </script>
 <template>
     <main>
+        <Hero />
         <div class="bg-color">
             <div class="container">
                 <div class="row">
