@@ -1,34 +1,9 @@
 <script>
+import { shopItems } from "../../data/menuLists"
 export default {
     data() {
         return {
-            shopItems: [
-                {
-                    href: "#",
-                    src: "./src/assets/buy-comics-digital-comics.png",
-                    text: "Digital Comics"
-                },
-                {
-                    href: "#",
-                    src: "./src/assets/buy-comics-merchandise.png",
-                    text: "DC Merchandise"
-                },
-                {
-                    href: "#",
-                    src: "./src/assets/buy-comics-subscriptions.png",
-                    text: "Subscription"
-                },
-                {
-                    href: "#",
-                    src: "./src/assets/buy-comics-shop-locator.png",
-                    text: "Comic Shop Locator"
-                },
-                {
-                    href: "#",
-                    src: "./src/assets/buy-dc-power-visa.svg",
-                    text: "DC Power Visa"
-                }
-            ]
+            shopItems
         }
     }
 }

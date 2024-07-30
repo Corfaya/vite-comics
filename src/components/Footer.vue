@@ -1,138 +1,13 @@
 <script>
+import { dcComicsList, shopList, dcList, sitesList, socials } from "../data/menuLists"
 export default {
     data() {
         return {
-            dcComicsList: [
-                {
-                    label: "Characters",
-                    path: "#"
-                },
-                {
-                    label: "Comics",
-                    path: "#"
-                },
-                {
-                    label: "Movies",
-                    path: "#"
-                },
-                {
-                    label: "TV",
-                    path: "#"
-                },
-                {
-                    label: "Games",
-                    path: "#"
-                },
-                {
-                    label: "Videos",
-                    path: "#"
-                },
-                {
-                    label: "News",
-                    path: "#"
-                }
-            ],
-            shopList: [
-                {
-                    label: "Shop DC",
-                    path: "#"
-                },
-                {
-                    label: "Shop DC Collectibles",
-                    path: "#"
-                }
-            ],
-            dcList: [
-                {
-                    label: "Terms Of Use",
-                    path: "#"
-                },
-                {
-                    label: "Privacy policy (New)",
-                    path: "#"
-                },
-                {
-                    label: "Ad Choises",
-                    path: "#"
-                },
-                {
-                    label: "Advertising",
-                    path: "#"
-                },
-                {
-                    label: "Jobs",
-                    path: "#"
-                },
-                {
-                    label: "Subscription",
-                    path: "#"
-                },
-                {
-                    label: "Talent Workshops",
-                    path: "#"
-                },
-                {
-                    label: "CPSC Certificates",
-                    path: "#"
-                },
-                {
-                    label: "Ratings",
-                    path: "#"
-                },
-                {
-                    label: "Shop Help",
-                    path: "#"
-                },
-                {
-                    label: "Contact Us",
-                    path: "#"
-                }
-            ],
-            sitesList: [
-                {
-                    label: "DC",
-                    path: "#"
-                },
-                {
-                    label: "MAD Magazione",
-                    path: "#"
-                },
-                {
-                    label: "DC Kids",
-                    path: "#"
-                },
-                {
-                    label: "DC Universe",
-                    path: "#"
-                },
-                {
-                    label: "DC Power Visa",
-                    path: "#"
-                }
-            ],
-            socials: [
-                {
-                alt: "Facebook",
-                path: "./src/assets/footer-facebook.png"
-            },
-            {
-                alt: "Twitter",
-                path: "./src/assets/footer-twitter.png"
-            },
-            {
-                alt: "Youtube",
-                path: "./src/assets/footer-youtube.png"
-            },
-            {
-                alt: "Pinterest",
-                path: "./src/assets/footer-pinterest.png"
-            },
-            {
-                alt: "Periscope",
-                path: "./src/assets/footer-periscope.png"
-            },
-
-            ]
+            dcComicsList,
+            shopList,
+            dcList,
+            sitesList,
+            socials
         }
     }
 }
@@ -148,23 +23,23 @@ export default {
                                 <div class="me-5">
                                     <h4 class="py-3 text-white fw-bolder text-uppercase">DC Comics</h4>
                                     <ul class="list-unstyled">
-                                        <li v-for="link, index in dcComicsList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
+                                        <li v-for="link, index in dcComicsList" :key="`c-${index}`"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
                                     </ul>
                                     <h4 class="py-3 text-white fw-bolder text-uppercase">Shop</h4>
                                     <ul class="list-unstyled">
-                                        <li v-for="link, index in shopList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
+                                        <li v-for="link, index in shopList" :key="`sh-${index}`"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
                                     </ul>
                                 </div>
                                 <div class="me-5">
                                     <h4 class="py-3 text-white fw-bolder text-uppercase">DC</h4>
                                     <ul class="list-unstyled">
-                                        <li v-for="link, index in dcList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
+                                        <li v-for="link, index in dcList" :key="`dc-${index}`"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
                                     </ul>
                                 </div>
                                 <div class="me-5">
                                     <h4 class="py-3 text-white fw-bolder text-uppercase">Sites</h4>
                                     <ul class="list-unstyled">
-                                        <li v-for="link, index in sitesList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
+                                        <li v-for="link, index in sitesList" :key="`s-${index}`"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
                                     </ul>
                                 </div>
                             </div>
