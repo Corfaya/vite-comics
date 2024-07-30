@@ -1,59 +1,9 @@
 <script>
+import { menuHeader } from '../data/menuLists'
 export default {
     data() {
         return {
-            menuItems: [
-                {
-                    isClicked: false,
-                    label: "Characters",
-                    url: "#"
-                },
-                {
-                    isClicked: true,
-                    label: "Comics",
-                    url: "#"
-                },
-                {
-                    isClicked: false,
-                    label: "Movies",
-                    url: "#"
-                },
-                {
-                    isClicked: false,
-                    label: "Tv",
-                    url: "#"
-                },
-                {
-                    isClicked: false,
-                    label: "Games",
-                    url: "#"
-                },
-                {
-                    isClicked: false,
-                    label: "Collectibles",
-                    url: "#"
-                },
-                {
-                    isClicked: false,
-                    label: "Videos",
-                    url: "#"
-                },
-                {
-                    isClicked: false,
-                    label: "Fans",
-                    url: "#"
-                },
-                {
-                    isClicked: false,
-                    label: "News",
-                    url: "#"
-                },
-                {
-                    isClicked: false,
-                    label: "Shop",
-                    url: "#"
-                },
-            ]
+            menuHeader,
         }
     }
 }
@@ -66,7 +16,7 @@ export default {
                     <div class="d-flex justify-content-between align-items-center">
                         <a href="/"><img class="img-fluid" src="../assets/dc-logo.png" alt="DC Comics"></a>
                         <ul class="list-unstyled d-flex">
-                            <li v-for="item, i in menuItems" :key="i" class="px-2 fw-bolder"><a class="text-decoration-none text-uppercase" :class=" { 'active' : item.isClicked } " :href="item.url"> {{ item.label }} </a></li>
+                            <li v-for="item, i in menuHeader" :key="`h-${i}`" class="px-2 fw-bolder"><a class="text-decoration-none text-uppercase" :class=" { 'active' : item.isClicked } " :href="item.url"> {{ item.label }} </a></li>
                         </ul>
                     </div>
                 </div>
