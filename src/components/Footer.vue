@@ -138,44 +138,42 @@ export default {
 }
 </script>
 <template>
-    <footer class="position-relative">
+    <footer>
         <div class="bg-image">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="d-flex py-4">
-                            <div class="me-5">
-                                <h4 class="py-3 text-white fw-bolder text-uppercase">DC Comics</h4>
-                                <ul class="list-unstyled">
-                                    <li v-for="link, index in dcComicsList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
-                                </ul>
-                                <h4 class="py-3 text-white fw-bolder text-uppercase">Shop</h4>
-                                <ul class="list-unstyled">
-                                    <li v-for="link, index in shopList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
-                                </ul>
-                            </div>
-                            <div class="me-5">
-                                <h4 class="py-3 text-white fw-bolder text-uppercase">DC</h4>
-                                <ul class="list-unstyled">
-                                    <li v-for="link, index in dcList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
-                                </ul>
-                            </div>
-                            <div class="me-5">
-                                <h4 class="py-3 text-white fw-bolder text-uppercase">Sites</h4>
-                                <ul class="list-unstyled">
-                                    <li v-for="link, index in sitesList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
-                                </ul>
+            
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex py-4 bg-logo">
+                                <div class="me-5">
+                                    <h4 class="py-3 text-white fw-bolder text-uppercase">DC Comics</h4>
+                                    <ul class="list-unstyled">
+                                        <li v-for="link, index in dcComicsList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
+                                    </ul>
+                                    <h4 class="py-3 text-white fw-bolder text-uppercase">Shop</h4>
+                                    <ul class="list-unstyled">
+                                        <li v-for="link, index in shopList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
+                                    </ul>
+                                </div>
+                                <div class="me-5">
+                                    <h4 class="py-3 text-white fw-bolder text-uppercase">DC</h4>
+                                    <ul class="list-unstyled">
+                                        <li v-for="link, index in dcList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
+                                    </ul>
+                                </div>
+                                <div class="me-5">
+                                    <h4 class="py-3 text-white fw-bolder text-uppercase">Sites</h4>
+                                    <ul class="list-unstyled">
+                                        <li v-for="link, index in sitesList" :key="index"><a class="text-decoration-none" :href="link.path">{{link.label}}</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="offset-2 col-6">
-                    <img class="img-fluid position-absolute" src="../assets/dc-logo-bg.png" alt="DC Logo">
                 </div>
-                </div>
-                
-            </div>
+            
         </div>
-        <div class="position-relative z-3 bg-color">
+        <div class="bg-color">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -199,21 +197,21 @@ footer {
         background-image: url("../assets/footer-bg.jpg");
         background-size: cover;
         z-index: 2;
-    }
-    .col-4 {
-        ul {
-            a {
-                color: grey;
-                transition: color 0.3 ease;
-                &:hover {
-                    color: rgb(165, 165, 165)
-                }
-            }
+        .bg-logo {
+            background-image: url("../assets/dc-logo-bg.png");
+            background-position: right;
+            background-repeat: no-repeat
         }
     }
-    .col-6 {
-        img {
-            top: -30px;
+    .col-12 {
+        ul {
+            a {
+                color: #838383;
+                transition: color 0.3 ease;
+                &:hover {
+                    color: #a5a5a5
+                }
+            }
         }
     }
 
