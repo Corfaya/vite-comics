@@ -36,7 +36,7 @@ export default {
                 color: #000;
                 transition: color 0.3s ease;
                 &:hover {
-                    color: variables.$hover_primary;
+                    color: lighten(variables.$primary_color, 25%)
                 }
             }
             .active {
